@@ -404,16 +404,16 @@ public class PythonClientCodegen extends DefaultCodegen implements CodegenConfig
         name = name.replaceAll("$", "");
 
         // if it's all uppper case, convert to lower case
-        if (name.matches("^[A-Z_]*$")) {
-            name = name.toLowerCase();
-        }
+        // if (name.matches("^[A-Z_]*$")) {
+        //     name = name.toLowerCase();
+        // }
 
         // underscore the variable name
         // petId => pet_id
-        name = underscore(name);
+        // name = underscore(name);
 
         // remove leading underscore
-        name = name.replaceAll("^_*", "");
+        // name = name.replaceAll("^_*", "");
 
         // for reserved word or word starting with number, append _
         if (isReservedWord(name) || name.matches("^\\d.*")) {
